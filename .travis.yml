@@ -22,3 +22,9 @@ notifications:
 env:
   global:
     - CODECOV_TOKEN="ec0c6a7d-4c6d-424a-b6b6-0357d955c4ac"
+
+services:
+  - postgresql
+
+before_install:
+  - psql -c 'create database fullstack_auth;' -U postgres
